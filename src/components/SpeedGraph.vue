@@ -9,61 +9,57 @@
       </button>
     </div>
     <div class="card-content">
-      <div class="h-64 bg-slate-800/50 rounded flex items-center justify-center relative">
-        <span class="text-slate-500 text-sm">Speed graph editor (not implemented)</span>
-
-        <!-- BUG: Points display but no actual graph rendering -->
-        <div v-if="points.length > 0" class="absolute top-2 right-2 text-xs text-slate-400">
-          {{ points.length }} points added
-        </div>
+      <!-- Chart Area (not implemented) -->
+      <div class="h-64 bg-slate-800/50 rounded mb-4 flex items-center justify-center">
+        <span class="text-slate-500 text-sm">Chart visualization not implemented</span>
       </div>
 
-      <!-- Points list -->
-      <div v-if="points.length > 0" class="mt-4 space-y-2">
-        <div class="text-xs text-slate-400 mb-2">Timeline Points:</div>
-        <div v-for="(point, index) in points" :key="index"
-             class="flex items-center gap-3 p-3 bg-slate-800/50 rounded border border-slate-700">
-          <div class="flex-1 grid grid-cols-3 gap-3">
-            <div>
-              <label class="block text-xs text-slate-400 mb-1">Time (seconds)</label>
-              <input
-                v-model.number="point.time"
-                type="number"
-                step="0.1"
-                placeholder="0.0"
-                class="w-full px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm focus:outline-none focus:border-blue-500">
-            </div>
-            <div>
-              <label class="block text-xs text-slate-400 mb-1">Speed (mph)</label>
-              <input
-                v-model.number="point.speed"
-                type="number"
-                placeholder="0"
-                class="w-full px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm focus:outline-none focus:border-blue-500">
-            </div>
-            <div>
-              <label class="block text-xs text-slate-400 mb-1">Event</label>
-              <select
-                v-model="point.event"
-                class="w-full px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm focus:outline-none focus:border-blue-500">
-                <option value="">None</option>
-                <option value="accident_start">Accident Start</option>
-                <option value="impact">Impact</option>
-                <option value="accident_end">Accident End</option>
-              </select>
-            </div>
-          </div>
-          <button
-            @click="removePoint(index)"
-            class="p-2 text-red-500 hover:bg-red-500/10 rounded">
-            🗑️
-          </button>
-        </div>
-      </div>
-
-      <!-- BUG: Validation not implemented -->
-      <div v-if="hasValidationError" class="mt-3 text-red-400 text-sm">
-        ⚠️ {{ validationError }}
+      <!-- Data Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-slate-700">
+              <th class="text-left py-2 px-3 text-xs font-semibold uppercase text-slate-400">Time (s)</th>
+              <th class="text-left py-2 px-3 text-xs font-semibold uppercase text-slate-400">Speed (mph)</th>
+              <th class="text-left py-2 px-3 text-xs font-semibold uppercase text-slate-400">Event Type</th>
+              <th class="w-16"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(point, index) in points" :key="index" class="border-b border-slate-800">
+              <td class="py-2 px-3">
+                <input
+                  v-model.number="point.time"
+                  type="number"
+                  step="0.1"
+                  class="w-20 px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm">
+              </td>
+              <td class="py-2 px-3">
+                <input
+                  v-model.number="point.speed"
+                  type="number"
+                  class="w-20 px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm">
+              </td>
+              <td class="py-2 px-3">
+                <select
+                  v-model="point.eventType"
+                  class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-sm">
+                  <option value="">None</option>
+                  <option value="accident_start">Accident Start</option>
+                  <option value="impact">Impact</option>
+                  <option value="accident_end">Accident End</option>
+                </select>
+              </td>
+              <td class="py-2 px-3 text-right">
+                <button
+                  @click="removePoint(index)"
+                  class="text-red-500 hover:text-red-400">
+                  🗑️
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -73,40 +69,22 @@
 export default {
   name: 'SpeedGraph',
   props: {
-    modelValue: {
+    gpsMetadata: {
       type: Array,
       default: () => [],
     },
   },
-  emits: ['update:modelValue'],
   data() {
     return {
       points: [],
     };
-  },
-  computed: {
-    hasValidationError() {
-      return false;
-    },
-    validationError() {
-      return '';
-    },
-  },
-  watch: {
-    modelValue: {
-      handler(newVal) {
-        this.points = JSON.parse(JSON.stringify(newVal));
-      },
-      immediate: true,
-      deep: true,
-    },
   },
   methods: {
     addPoint() {
       this.points.push({
         time: 0,
         speed: 0,
-        event: '',
+        eventType: '',
       });
     },
     removePoint(index) {

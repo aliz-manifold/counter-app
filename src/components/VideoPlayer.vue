@@ -2,17 +2,60 @@
   <div class="card">
     <div class="card-header">
       <h3 class="card-title">Event Video</h3>
+      <div class="flex gap-2">
+        <button
+          @click="viewMode = 'pip'"
+          :class="['px-3 py-1 rounded text-sm', viewMode === 'pip' ? 'bg-blue-600' : 'bg-slate-700']">
+          Picture in Picture
+        </button>
+        <button
+          @click="viewMode = 'sidebyside'"
+          :class="['px-3 py-1 rounded text-sm', viewMode === 'sidebyside' ? 'bg-blue-600' : 'bg-slate-700']">
+          Side by Side
+        </button>
+      </div>
     </div>
     <div class="card-content">
-      <!-- Video Player Placeholder -->
-      <div class="bg-black rounded aspect-video flex items-center justify-center">
-        <div class="text-center text-slate-500">
-          <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <p class="text-sm">Video Player</p>
-          <p class="text-xs mt-1">Multi-camera sync not implemented</p>
+      <!-- Picture in Picture Mode -->
+      <div v-if="viewMode === 'pip'" class="relative">
+        <video
+          ref="mainVideo"
+          class="w-full rounded"
+          controls
+          @timeupdate="syncTimeline">
+          <source :src="videos[0]?.url" type="video/mp4">
+        </video>
+        <!-- Secondary video (broken implementation) -->
+        <div class="absolute bottom-4 right-4 w-48">
+          <video class="w-full rounded border-2 border-white">
+            <source :src="videos[1]?.url" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Side by Side Mode (incomplete) -->
+      <div v-else class="grid grid-cols-2 gap-4">
+        <video
+          ref="video1"
+          class="w-full rounded"
+          controls>
+          <source :src="videos[0]?.url" type="video/mp4">
+        </video>
+        <video
+          ref="video2"
+          class="w-full rounded"
+          controls>
+          <source :src="videos[1]?.url" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="mt-4 flex gap-2">
+        <div
+          v-for="(video, index) in videos"
+          :key="index"
+          class="w-20 h-16 bg-slate-800 rounded cursor-pointer hover:ring-2 ring-blue-500">
+          <img v-if="video.thumbnail" :src="video.thumbnail" class="w-full h-full object-cover rounded">
         </div>
       </div>
     </div>
@@ -30,12 +73,16 @@ export default {
   },
   data() {
     return {
-      currentCamera: null,
+      viewMode: 'pip',
       videos: [],
     };
   },
-  mounted() {
-    console.log('VideoPlayer mounted');
+  methods: {
+    syncTimeline(event) {
+      // Incomplete: should sync all videos to same timeline
+      // Incomplete: should handle videos of different lengths
+      console.log('Current time:', event.target.currentTime);
+    },
   },
 };
 </script>
@@ -46,7 +93,7 @@ export default {
 }
 
 .card-header {
-  @apply p-4 border-b border-slate-800;
+  @apply p-4 border-b border-slate-800 flex justify-between items-center;
 }
 
 .card-title {
