@@ -66,7 +66,6 @@ export function validateAccidentFields(isAccident, nofaultAccident, costEstimate
     };
   }
 
-  // Should check if estimatedDamageToVehicle is within range
 
   return { valid: true };
 }
@@ -88,8 +87,6 @@ export function validateIncidentTypes(incidents, incidentTypes) {
     const type = incidentTypes.find(t => t.translatedType === i.name);
     return type?.hasIntensity === true;
   });
-
-  // Currently not checking anything
 
   return { valid: true };
 }

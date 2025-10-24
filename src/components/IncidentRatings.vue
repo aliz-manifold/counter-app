@@ -126,7 +126,6 @@ export default {
     shouldShowIntensity(incident) {
       if (!incident.name) return false;
 
-      // TSP incidents only show intensity if accurate
       if (incident.fromTsp && incident.accuracy !== 0) {
         return false;
       }

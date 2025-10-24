@@ -58,7 +58,6 @@ export default {
       required: true,
     },
   },
-  // Should extract vehicleDetails from event.incident.vehicleDetails
 };
 </script>
 

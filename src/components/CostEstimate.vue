@@ -77,10 +77,6 @@ export default {
       return ((this.localEstimate.estimatedDamageToVehicle / this.localEstimate.currentCostOfVehicle) * 100).toFixed(1);
     },
     validationError() {
-      // Should validate:
-      // - Both values must be positive
-      // - Must be within valid range (1 - 10,000,000)
-      // - Damage cannot exceed vehicle value
       return '';
     },
   },

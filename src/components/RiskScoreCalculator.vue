@@ -36,7 +36,6 @@ export default {
   emits: ['update:riskScore'],
   computed: {
     calculatedScore() {
-      // Real algorithm should consider:
       // - Base score for behavioral incidents (0.5)
       // - Heavy weather (+0.5)
       // - Night time (+0.5)

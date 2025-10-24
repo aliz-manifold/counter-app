@@ -86,9 +86,6 @@ export default {
   },
   computed: {
     hasValidationError() {
-      // Should check: accident_start must come before impact
-      // Should check: impact must come before accident_end
-      // Should check: times should be in ascending order
       return false;
     },
     validationError() {

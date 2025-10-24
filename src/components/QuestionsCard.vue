@@ -69,7 +69,6 @@ export default {
   methods: {
     updateResponse(key, value) {
       this.responses[key] = value;
-      // Should emit the entire responses object
     },
   },
 };
