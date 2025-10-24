@@ -1,0 +1,137 @@
+[
+  {
+    "id": "0e1cbc4a-84d0-4ce9-8225-cb66013ee0f5",
+    "translatedType": "Distracted Driving",
+    "logo": "distracted_driving",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "1a25ad35-7648-4d3f-a80e-fe3a3e240723",
+    "translatedType": "No Seatbelt",
+    "logo": "no_seatbelt",
+    "isExtended": true,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "05a30fea-ec95-4bf2-b182-537487535e51",
+    "translatedType": "Tailgating",
+    "logo": "follow_too_close",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "089bd845-da8a-4abc-a5ca-984e6daf0548",
+    "translatedType": "Hard Cornering",
+    "logo": "hard_turning",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "a576807d-30ab-40a9-a68e-7dd4f6b00a29",
+    "translatedType": "Stop Sign Pass",
+    "logo": "stop_sign_pass",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "48359cb5-b7a6-434f-ade2-d7158d9f01de",
+    "translatedType": "Late Start",
+    "logo": "late_start",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "a3007bf1-c2f7-4e95-abec-dff77f3f34a1",
+    "translatedType": "Late Braking",
+    "logo": "late_brake",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "595f999d-46a1-4f98-b83e-28214da40100",
+    "translatedType": "Lane Departure",
+    "logo": "lane_change_no_signal",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "2ede2fd5-d1e4-410f-b0b4-63fafdbfdd70",
+    "translatedType": "Speeding",
+    "logo": "speeding",
+    "isExtended": true,
+    "jumpFromQueue": true,
+    "isBehavioralIncident": true,
+    "hasIntensity": false
+  },
+  {
+    "id": "378ad40f-da1a-4176-aa2d-872c6dd77b58",
+    "translatedType": "Hard Acceleration",
+    "logo": "hard_on_gas",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "0ee56e05-2f0a-4cab-a92b-f59f99648703",
+    "translatedType": "Hard Brake",
+    "logo": "hard_on_brake",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "01a95246-6fd8-4563-9c33-5994b6ef7975",
+    "translatedType": "Accident",
+    "logo": "accident",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": true
+  },
+  {
+    "id": "ac38d418-3df6-41e9-b68e-aacd9080f545",
+    "translatedType": "Near Collision",
+    "logo": "near_collision",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": true,
+    "hasIntensity": false
+  },
+  {
+    "id": "2b07c390-7da9-4843-90d2-875a3b45cb16",
+    "translatedType": "Manual Selection",
+    "logo": "button_pressed",
+    "isExtended": false,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": false,
+    "hasIntensity": false
+  },
+  {
+    "id": "183b6df9-89f4-44fe-9313-8ddf073cd18c",
+    "translatedType": "Obstructed Camera",
+    "logo": "obstructed_camera",
+    "isExtended": true,
+    "jumpFromQueue": false,
+    "isBehavioralIncident": false,
+    "hasIntensity": false
+  }
+]

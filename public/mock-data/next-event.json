@@ -1,0 +1,174 @@
+{
+  "id": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+  "riskScore": null,
+  "isReportReady": null,
+  "canEdit": true,
+  "lastCoachingSentTime": null,
+  "editor": {
+    "id": "auth0|user123",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com"
+  },
+  "modifiedBy": null,
+  "incident": {
+    "id": "9e696c54-9bf1-4207-b8db-2c0b2b1a2a88",
+    "connectionId": "f774c5aa-2f76-4ed3-8c5c-3f968a2f01af",
+    "startedAt": "2025-10-23T18:40:02Z",
+    "endedAt": "2025-10-23T18:40:12Z",
+    "startLatitude": 39.241943359375,
+    "startLongitude": -76.6928329467774,
+    "endLatitude": 39.2434272766113,
+    "endLongitude": -76.6907501220703,
+    "type": "rosco_ForwardCollisionWarning",
+    "translatedType": "Tailgating",
+    "durationSeconds": 10,
+    "acceleration": 0.189483325556795,
+    "maxSpeed": 114.379516601562,
+    "minSpeed": 108.264213562012,
+    "videoUrlExt": null,
+    "thumbnails": [
+      {
+        "type": 1,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/imgs/red.png"
+      },
+      {
+        "type": 2,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/imgs/green.png"
+      },
+      {
+        "type": 3,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/imgs/blue.png"
+      }
+    ],
+    "videos": [
+      {
+        "type": 1,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/videos/red.mp4"
+      },
+      {
+        "type": 2,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/videos/green.mp4"
+      }
+      {
+        "type": 3,
+        "url": "https://cdn-manifold.nyc3.cdn.digitaloceanspaces.com/manifold/components/videos/blue.mp4"
+      }
+    ],
+    "reconstructionMapUrl": null,
+    "gpsMetadata": [
+      {
+        "lat": 39.241943359375,
+        "lng": -76.69283294677734,
+        "speed": 114.3795166015625,
+        "time": "2025-10-23T14:40:02.705Z"
+      },
+      {
+        "lat": 39.242130279541016,
+        "lng": -76.69256591796875,
+        "speed": 111.76819610595703,
+        "time": "2025-10-23T14:40:03.706Z"
+      },
+      {
+        "lat": 39.242313385009766,
+        "lng": -76.69229125976562,
+        "speed": 110.26808166503906,
+        "time": "2025-10-23T14:40:04.706Z"
+      },
+      {
+        "lat": 39.242496490478516,
+        "lng": -76.69203186035156,
+        "speed": 109.4698715209961,
+        "time": "2025-10-23T14:40:05.706Z",
+      }
+    ],
+    "vehicleId": "3636a4d9-84cf-49fb-a3cc-249c6b62512e",
+    "driverId": null,
+    "vehicleThumbnails": [],
+    "driverThumbnails": [],
+    "vehicleGroups": [],
+    "vehicleDetails": {
+      "vin": "1GCWGAFG3L1220439",
+      "name": "CHEVROLET Express",
+      "make": "CHEVROLET",
+      "company": "GENERAL MOTORS LLC",
+      "model": "Express",
+      "constructionYear": "2020",
+      "fuelType": "Gasoline",
+      "bodyClass": "Cargo Van",
+      "type": "TRUCK"
+    },
+    "hasVideo": true,
+    "driver": null,
+    "vehicle": null
+  },
+  "metaData": [
+    {
+      "id": "5c6355cf-7a42-40bd-8f91-12279fbef9ab",
+      "eventId": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+      "eventMetadataType": 1,
+      "translatedIncidentType": "Tailgating",
+      "excludeFromAnnotation": false,
+      "annotatedIncidentIntensity": null,
+      "tspIncidentTag": null,
+      "providerId": "1f191b79-a01e-4571-81a6-3b6f5469a2d5",
+      "weatherMetadata": null,
+      "key": null,
+      "value": "rosco_ForwardCollisionWarning"
+    },
+    {
+      "id": "b983ed59-34d2-4213-9ecf-024664d52bad",
+      "eventId": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+      "eventMetadataType": 1,
+      "translatedIncidentType": "Manual Selection",
+      "excludeFromAnnotation": false,
+      "annotatedIncidentIntensity": null,
+      "tspIncidentTag": 2,
+      "providerId": "1f191b79-a01e-4571-81a6-3b6f5469a2d5",
+      "weatherMetadata": null,
+      "key": null,
+      "value": "rosco_ENDUSER_CLIP"
+    },
+    {
+      "id": "5effc16b-7104-407e-8e1d-e7fd39ec0742",
+      "eventId": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+      "eventMetadataType": 15,
+      "translatedIncidentType": "",
+      "excludeFromAnnotation": false,
+      "annotatedIncidentIntensity": null,
+      "tspIncidentTag": null,
+      "providerId": null,
+      "weatherMetadata": null,
+      "key": "PostalCodeId",
+      "value": "13248"
+    },
+    {
+      "id": "92a23538-f35c-4379-95c0-52941a35e8c3",
+      "eventId": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+      "eventMetadataType": 14,
+      "translatedIncidentType": "",
+      "excludeFromAnnotation": false,
+      "annotatedIncidentIntensity": null,
+      "tspIncidentTag": null,
+      "providerId": null,
+      "weatherMetadata": null,
+      "key": "StateId",
+      "value": "56"
+    },
+    {
+      "id": "a8b4d5a6-6b9e-4370-a7f7-308b0ebc14a3",
+      "eventId": "ad2b0cd1-9e38-4d3b-b97c-19e637693af2",
+      "eventMetadataType": 5,
+      "translatedIncidentType": "",
+      "excludeFromAnnotation": false,
+      "annotatedIncidentIntensity": null,
+      "tspIncidentTag": null,
+      "providerId": null,
+      "weatherMetadata": null,
+      "key": "StateInfo",
+      "value": "{\"state\":\"Maryland\",\"ISO3166-2-lvl4\":\"US-MD\",\"country\":\"United States\",\"country_code\":\"us\",\"distance\":0}"
+    }
+  ],
+  "history": [],
+  "reviewLog": null,
+  "parkedLocations": null
+}
