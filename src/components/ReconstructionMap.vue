@@ -83,12 +83,10 @@ export default {
   },
   methods: {
     handleCanvasClick(event) {
-      // Not implemented: should place element at click position
       console.log('Canvas clicked at:', event.offsetX, event.offsetY);
     },
     clearCanvas() {
       this.elements = [];
-      // Not implemented: should clear canvas drawing
     },
   },
 };

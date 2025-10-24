@@ -94,42 +94,13 @@ public/mock-data/
 └── reconstruction-map.png      # Reference image for map
 ```
 
-## Success Criteria
+## What to Implement
 
-**Minimum (to pass):**
-- ✅ Video player loads and displays videos from API
-- ✅ Timeline sync works in at least one viewing mode
-- ✅ Speed graph table adds/removes points
-- ✅ Basic chart visualization shows data points
-
-**Bonus (impressive):**
-- ✅ Both video modes work with proper sync
-- ✅ Chart updates in real-time and color-codes events
-- ✅ Leaflet map initializes with correct location
-- ✅ Canvas allows basic element placement
-- ✅ Map/canvas zoom sync implemented
-
-## Key Technologies You'll Use
-
-- **Vue 3** - Component structure and reactivity
-- **HTML5 Video API** - For timeline sync (`video.currentTime`, `timeupdate` event)
-- **Leaflet.js** - Map rendering (install with `npm install leaflet`)
-- **Canvas API** - Drawing and element placement
-- **Chart.js or similar** - Speed graph visualization (your choice)
-
-## Tips
-
-- Read the mock data structure first (`/mock-data/next-event.json`)
-- Check component props - data might already be passed but not used
-- Video sync: Listen to `timeupdate` event on one video, update others
-- Chart: Start simple (line chart), then add event markers
-- Leaflet: Initialize with GPS coordinates from event data
-- You can use AI tools to help with implementation
-
-## Tech Stack
-
-Vue 3 • Tailwind CSS • Vite • HTML5 APIs • Leaflet • Canvas
-
----
-
-**Remember**: Focus on getting things working, then refine. Partial implementations are better than nothing!
+- Video player loads and displays videos from API
+- Timeline sync works in at least one viewing mode
+- Speed graph table adds/removes points
+- Basic chart visualization shows data points
+- Chart updates in real-time and color-codes events
+- Leaflet map initializes with correct location
+- Canvas allows basic element placement
+- Map/canvas zoom sync implemented

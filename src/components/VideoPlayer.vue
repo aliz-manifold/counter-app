@@ -79,8 +79,6 @@ export default {
   },
   methods: {
     syncTimeline(event) {
-      // Incomplete: should sync all videos to same timeline
-      // Incomplete: should handle videos of different lengths
       console.log('Current time:', event.target.currentTime);
     },
   },
