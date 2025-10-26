@@ -18,8 +18,7 @@ Build and fix a video annotation platform for reviewing driving incident events.
 
 You have **3 incomplete components** to fix and implement:
 
-### 1. Video Player (Picture-in-Picture & Side-by-Side)
-**Reference**: `public/mock-data/video-player.png`
+### 1. Video Player (Picture-in-Picture & Side-by-Side) (1st priority)
 
 **Requirements:**
 - Load videos from mock API response (`event.incident.videos`)
@@ -34,8 +33,7 @@ You have **3 incomplete components** to fix and implement:
 - PiP secondary video doesn't have controls
 - Mode switching doesn't work properly
 
-### 2. Speed Graph (Chart + Table Sync)
-**Reference**: `public/mock-data/speed-graph.png`
+### 2. Speed Graph (Chart + Table Sync) (2nd priority)
 
 **Requirements:**
 - Table to add/edit/remove speed data points
@@ -50,8 +48,7 @@ You have **3 incomplete components** to fix and implement:
 - No color coding for accident events
 - GPS metadata prop not used to initialize data
 
-### 3. Reconstruction Map (Leaflet + Canvas)
-**Reference**: `public/mock-data/reconstruction-map.png`
+### 3. Reconstruction Map (Leaflet + Canvas) (3rd priority)
 
 **Requirements:**
 - **Left side**: Leaflet map with Google Maps layer
@@ -104,3 +101,23 @@ public/mock-data/
 - Leaflet map initializes with correct location
 - Canvas allows basic element placement
 - Map/canvas zoom sync implemented
+
+## Reference Images
+
+### Video Player - Picture in Picture Mode
+![Video Player PiP](public/mock-data/video-player-picture-in-picture.png)
+
+### Video Player - Side by Side Mode
+![Video Player Side by Side](public/mock-data/video-player-side-by-side.png)
+
+### Speed Graph - Initial State
+![Speed Graph](public/mock-data/speed-graph.png)
+
+### Speed Graph - Completed State
+![Speed Graph Completed](public/mock-data/speed-graph-completed.png)
+
+### Reconstruction Map - Initial State
+![Reconstruction Map](public/mock-data/reconstruction-map.png)
+
+### Reconstruction Map - Completed State
+![Reconstruction Map Completed](public/mock-data/reconstruction-map-completed.png)
