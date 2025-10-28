@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-950 text-white p-6">
     <div class="max-w-[1920px] mx-auto mb-6">
-      <h1 class="text-2xl font-bold mb-2">Event Annotation Platform</h1>
+      <h1 class="text-2xl font-bold mb-2">Driving Incident Review</h1>
       <div class="text-sm text-slate-400">
         <span v-if="currentEvent">Event ID: {{ currentEvent.id.substring(0, 8) }}...</span>
       </div>
